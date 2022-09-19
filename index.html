@@ -5,21 +5,114 @@
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="index.js"></script>
 
 </head>
 <body>
-    <header>
+    <header >
+        <nav class="nav">
+            <a href="#table" class="active">
+                Таблица
+            </a>
+            <a href="#form">
+                Форма
+            </a>
+            <a href="#gallery">
+                Галлерея
+            </a>
+        </nav>
 
     </header>
 
+
     <main>
-<p>
-    ssssssssshhsss
-</p>
+        <div class="breadcrumbs">
+            <a href="#" class="breadcrumb">
+                Главная
+            </a>
+            <p>&nbsp/&nbsp</p>
+            <a href="#" class="breadcrumb">
+                Тестовое задание
+            </a>
+        </div>
+
+        <h1>
+            Тестовое задание
+        </h1>
+
+
+        <section id="table" class="section sec_table">
+            <h2>
+                Таблица
+            </h2>
+            <p class="text">
+                Должна быть адаптивной, без дублирования информации.
+            </p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Материал</th>
+                    <th>Размер</th>
+                    <th>Цена</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-label="Название">Стеновой паркет</td>
+                    <td data-label="Материал">Ольха</td>
+                    <td data-label="Размер">13 × 78 × 300 мм</td>
+                    <td data-label="Цена">
+                        <div class="price_column">
+                            <p>52 ₽</p>
+                            <button type="button" class="basket_button"><p>В корзину</p></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Название">Доска для пола, сорт А</td>
+                    <td data-label="Материал">Лиственница</td>
+                    <td data-label="Размер">27 × 134 × 2000 мм</td>
+                    <td data-label="Цена">1062 ₽</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="form" class="section sec_form">
+            <h2>
+                Форма
+            </h2>
+            <p class="text">Должна иметь проверку полей: обязательное поле, формат, минимальное значение.
+                При несоответствии должна выводиться соответствующая ошибка.
+                Поле «Телефон» должен содержать маску ввода.
+            </p>
+            <div class="form_wrap">
+                <h3>
+                    Заказать проект
+                </h3>
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="gallery" class="section sec_gallery">
+            <h2>
+                Галерея
+            </h2>
+        </section>
     </main>
 
     <footer>
 
     </footer>
+
+
+<!--    <script src="jquery-3.6.1.min.js"></script>-->
 </body>
 </html>
