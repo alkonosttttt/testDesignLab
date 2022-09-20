@@ -14,7 +14,7 @@
             <a href="#table" class="active">
                 Таблица
             </a>
-            <a href="#form">
+            <a href="#form_section">
                 Форма
             </a>
             <a href="#gallery">
@@ -65,7 +65,7 @@
                     <td data-label="Цена">
                         <div class="price_column">
                             <p>52 ₽</p>
-                            <button type="button" class="basket_button"><p>В корзину</p></button>
+                            <button type="button" class="basket_button">В корзину</button>
                         </div>
                     </td>
                 </tr>
@@ -80,7 +80,7 @@
 
         </section>
 
-        <section id="form" class="section sec_form">
+        <section id="form_section" class="section sec_form">
             <h2>
                 Форма
             </h2>
@@ -92,6 +92,151 @@
                 <h3>
                     Заказать проект
                 </h3>
+
+                <form id="form" action="#" enctype="multipart/form-data" method="post">
+
+                    <label for="name" class="name_label label_text">Название</label>
+                    <input type="text" name="name" id="name"  class="form_name _req">
+
+                    <label for="price" class="price_label label_text">Цена</label>
+                    <input type="text" name="" id="price"  class="form_price _req">
+
+                    <label for="phone" class="phone_label label_text">Телефон</label>
+                    <input type="tel" name="phone" id="phone"  class="form_phone _req _tel" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+
+                    <label for="email" class="email_label label_text">Почта</label>
+                    <input type="email" name="email" id="email"  class="form_email _req _email">
+
+
+                    <p class="file_label label_text">Приложить файлы</p>
+                    <div id="drop-area">
+                        <label class="sendFile-button" for="fileElem">
+                            <p>Кликните или перенесите файлы в эту область.</p>
+                            <p>Только JPG, до 1 Мб</p>
+                        </label>
+                        <input type="file" name="file" id="fileElem" multiple accept="image/*"
+                               onchange="handleFiles(this.files)">
+                        <div id="sendFile-gallery"></div>
+                    </div>
+
+
+                    <div id="formPreview" class="file_preview">
+                        <div class="files">
+                            <div class="file">
+                                <button type="button">
+                                    <img src="delFileIcon.svg" alt="delete">
+                                </button>
+                                <div class="change">filename-01.jpg</div>
+                            </div>
+<!--                            <progress value="23" max="100"></progress>-->
+                        </div>
+                        <div class="files">
+                            <div class="file">
+                                <button type="button">
+                                    <img src="delFileIcon.svg" alt="delete">
+                                </button>
+                                <div class="change">filename-02.jpg</div>
+                            </div>
+                            <progress value="65" max="100"></progress>
+                        </div>
+                        <div class="files">
+                            <div class="file">
+                                <button type="button">
+                                    <img src="delFileIcon.svg" alt="delete">
+                                </button>
+                                <div class="change">filename-02-copy.jpg</div>
+                            </div>
+                            <progress value="30" max="100"></progress>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                        <input type="reset" class="reset" value="Clear it!" />
+                        <div class="__select">
+                            <div class="__select__content">
+                                <input id="singleSelect0" class="__select__input" type="checkbox" name="singleSelect" checked />
+                                <label for="singleSelect0" class="__select__label">Option 0</label>
+                                <input id="singleSelect1" class="__select__input" type="checkbox" name="singleSelect" />
+                                <label for="singleSelect1" class="__select__label">Option 1</label>
+                                <input id="singleSelect2" class="__select__input" type="checkbox" name="singleSelect" disabled />
+                                <label for="singleSelect2" class="__select__label">Option 2 (disabled)</label>
+                                <input id="singleSelect3" class="__select__input" type="checkbox" name="singleSelect" />
+                                <label for="singleSelect3" class="__select__label">Option 3</label>
+                                <input id="singleSelect4" class="__select__input" type="checkbox" name="singleSelect" />
+                                <label for="singleSelect4" class="__select__label">Option 4</label>
+                                <input id="singleSelect5" class="__select__input" type="checkbox" name="singleSelect" />
+                                <label for="singleSelect5" class="__select__label">Option 5</label>
+                                <input id="singleSelect6" class="__select__input" type="checkbox" name="singleSelect" />
+                                <label for="singleSelect6" class="__select__label">Option 6</label>
+                                <input id="singleSelect7" class="__select__input" type="checkbox" name="singleSelect" />
+                                <label for="singleSelect7" class="__select__label">Option 7</label>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <label for="password-input" class="password_label label_text">Пароль</label>
+                    <div class="password">
+                        <input type="password" class="form_password _req" id="password-input" name="password">
+                        <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                    </div>
+
+
+
+
+
+
+                    <label for="wishes" class=" wishes_label label_text">Пожелания</label>
+                    <input type="text" name="wishes" id="wishes"  class="form_wishes _req">
+                    <div class="wish_items">
+                        <div class="wish_item">
+                            <p>Кондиционер</p>
+                            <button type="button">
+                                <img src="del_wish.svg" alt="del_wish">
+                            </button>
+                        </div>
+                        <div class="wish_item">
+                            <p>Холодильник</p>
+                            <button type="button">
+                                <img src="del_wish.svg" alt="del_wish">
+                            </button>
+                        </div>
+                        <div class="wish_item">
+                            <p>Интернет</p>
+                            <button type="button">
+                                <img src="del_wish.svg" alt="del_wish">
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+                    <button id="submitApplication" class="form_button" type="submit">ОТПРАВИТЬ</button>
+
+
+                </form>
+
+
+
+
+
 
             </div>
         </section>
@@ -105,6 +250,9 @@
             <h2>
                 Галерея
             </h2>
+            <p class="text">
+                Фильтры должны фильтровать изображения без перезагрузки.  Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото.
+            </p>
         </section>
     </main>
 
@@ -114,5 +262,17 @@
 
 
 <!--    <script src="jquery-3.6.1.min.js"></script>-->
+
+    <script src="https://unpkg.com/imask"></script>
+
+    <script>
+        var element = document.getElementById('phone');
+        var element2 = document.getElementById('phone_2');
+        var maskOptions = {
+            mask: '+{7} (000) 000-00-00'
+        };
+        var mask = IMask(element, maskOptions);
+        var mask2 = IMask(element2, maskOptions);
+    </script>
 </body>
 </html>

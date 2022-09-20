@@ -38,7 +38,11 @@
 html,body,div,p,h1,header,nav,aside,footer,a,ul,li,input,form, h1, h2 {
     margin:0;padding:0;outline:0;border:0;
 }
-
+button {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}
 body {
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
@@ -57,6 +61,7 @@ a {
 }
 
 header {
+    z-index: 10;
     height: 72px;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
     position: sticky;
@@ -197,14 +202,14 @@ table tr {
 
 .basket_button:hover {
     background-color: rgba(0, 102, 204, 1);
-    color: rgb(226, 239, 252);
+    color: rgba(255, 255, 255, 1);
 }
 
 
 
 
 
-/* FORM*/
+/* FORM*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .sec_form {
     margin-top: 104px;
@@ -214,6 +219,8 @@ table tr {
     background-color: #F5F5F7;
     border-radius: 20px;
     max-width: 842px;
+    padding: 96px;
+    box-sizing: border-box;
 }
 h3 {
     font-weight: 700;
@@ -221,6 +228,393 @@ h3 {
     line-height: 40px;
     color: #1D1D1F;
 }
+
+.label_text {
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+/*<!--+++++++++++++++ОСТАВИТЬ ЗАЯВКУ +++++++++++++++++++++++++++++++++++-->*/
+
+
+
+/*=====================ОСТАВИТЬ ЗАЯВКУ форма 1*/
+
+
+#form{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, minmax(56px, auto));
+    row-gap: 38px;
+    column-gap: 32px;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+
+.form_name, .form_phone, .form_email, .form_comment, #sendFile, .form_price, .form_wishes, .form_password {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    color: #1D1D1F;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 34px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid rgba(225, 225, 225, 1);
+    box-sizing: border-box;
+}
+/**/
+
+.form_name:focus, .form_phone:focus, .form_email:focus, .form_comment:focus, #sendFile:focus,
+.form_price:focus, .form_wishes:focus, .form_password:focus {
+    caret-color: rgba(0, 102, 204, 1);
+    border: 1px solid rgba(0, 102, 204, 1);
+}
+
+.form_name, .name_label {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+
+.form_price, .price_label {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.form_phone, .phone_label {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.form_email, .email_label {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+
+.file_label {
+    border-radius: 4px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+#drop-area {
+    margin-top: 34px;
+    min-height: 112px;
+    padding: 32px;
+    border: 1px dashed #B9B1B1;
+    border-radius: 4px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.sendFile-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #58585D;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+
+#sendFile-gallery {
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    display: flex;
+}
+#sendFile-gallery img {
+    justify-self: center;
+    width: 130px;
+    height: max-content;
+    vertical-align: middle;
+}
+.sendFile-button-img {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+#fileElem {
+    display: none;
+}
+.sendFile-text {
+    font-size: 16px;
+    color: #6C786A;
+    font-weight: 400;
+    text-align: center;
+}
+
+.file_preview {
+    margin-top: -16px;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    gap: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.files {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.file {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 300;
+    color: #58585D;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.password, .password_label {
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.password{
+    position: relative;
+}
+.form_password {
+    width: 100%;
+}
+.password-control {
+    position: absolute;
+    top: 51px;
+    right: 6px;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(password_close.svg) 0 0 no-repeat;
+}
+.password-control.view {
+    background: url(password_open.svg) 0 0 no-repeat;
+}
+
+
+
+
+.__select {
+    display: flex;
+    width: 230px;
+    height: 204px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    border-radius: 5px;
+    border: solid 1px #c7ccd1;
+}
+
+.__select__content {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    width: 100%;
+
+    overflow-y: auto;
+    overflox-x: hidden;
+}
+
+.reset {
+    display: flex;
+    width: 230px;
+    padding: 8px 16px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    border: solid 1px #c7ccd1;
+    border-radius: 5px;
+
+    transition: all 0.2s ease-out;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    background-color: #ffffff;
+    color: #333333;
+
+
+
+
+.__select__label {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 40px;
+    padding: 0 16px;
+
+    transition: all 0.2s ease-out;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.form_wishes, .wishes_label, .wish_items  {
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.wish_items {
+    margin-top: 106px;
+    display: flex;
+    gap: 8px;
+}
+.wish_item {
+    background-color: #58585D;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 7px 13px 9px 16px;
+    box-sizing: border-box;
+}
+#submitApplication {
+    text-transform: uppercase;
+    background-color: #D53D0F;
+    border-radius: 8px;
+    height: 100%;
+    width: 180px;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border: 0;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#submitApplication:hover {
+    background-color: #f45627;
+}
+
+
+/*валидация полей НАЧАЛО*/
+
+/*-----------------------СТИЛИ ДЛЯ НЕЗАПОЛНЕННЫХ ПОЛЕЙ ПОЛЕЙ*/
+
+.form_name._error, .form_phone._error, .form_email._error, .form_comment._error, .form_wishes._error{
+
+    border: 1px solid rgba(220, 53, 69, 1);
+}
+
+.form_name._red:focus::-webkit-input-placeholder, .form_phone._red:focus::-webkit-input-placeholder,
+.form_email._red:focus::-webkit-input-placeholder,.form_comment._red:focus::-webkit-input-placeholder,
+.form_wishes._red:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+/*Chrome 57 и Firefox 51*/
+
+.form_name._red::placeholder, .form_phone._red::placeholder, .form_email._red::placeholder,
+.form_comment._red::placeholder, .form_wishes._red::placeholder{
+    color: rgba(220, 53, 69, 1);
+}
+/*Firefox новые версии*/
+.form_name._red::-moz-placeholder, .form_phone._red::-moz-placeholder, .form_email._red::-moz-placeholder,
+.form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder{
+    color: rgba(220, 53, 69, 1);
+}
+/*Internet Explorer*/
+.form_name._red:-ms-input-placeholder, .form_phone._red:-ms-input-placeholder, .form_email._red:-ms-input-placeholder,
+.form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder{
+    color: rgba(220, 53, 69, 1);
+}
+/*Microsoft Edge*/
+.form_name._red::-ms-input-placeholder, .form_phone._red::-ms-input-placeholder, .form_email._red::-ms-input-placeholder,
+.form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder{
+    color: rgba(220, 53, 69, 1);
+}
+/*Chrome, Opera и Safari*/
+.form_name._red::-webkit-input-placeholder, .form_phone._red::-webkit-input-placeholder,
+.form_email._red::-webkit-input-placeholder, .form_comment._red::-webkit-input-placeholder,
+.form_wishes._red::-webkit-input-placeholder{
+    color: rgba(220, 53, 69, 1);
+}
+/*Firefox с 4 по 19 версии*/
+.form_name._red-moz-placeholder, .form_phone._red-moz-placeholder, .form_email._red-moz-placeholder,
+.form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder{
+    color: rgba(220, 53, 69, 1);
+}
+
+/*валидация полей КОНЕЦ*/
+
+
+
+input {
+    border-radius: 4px;
+    height: 56px;
+}
+
+
+
+
+
+
+
+/*Send file +++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
 
 
 
