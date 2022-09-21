@@ -5,7 +5,13 @@
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="select.css" type="text/css">
+    <link rel="stylesheet" href="switch.css" type="text/css">
+    <link rel="stylesheet" href="adaptability.css" type="text/css">
+
     <script src="index.js"></script>
+    <script src="switch.js"></script>
+    <script src="select.js"></script>
 
 </head>
 <body>
@@ -70,10 +76,37 @@
                     </td>
                 </tr>
                 <tr>
+                    <td data-label="Название">Стеновой паркет</td>
+                    <td data-label="Материал">Ольха</td>
+                    <td data-label="Размер">13 × 78 × 600 мм</td>
+                    <td data-label="Цена">
+                        <div class="price_column">
+                            <p>112 ₽</p>
+                            <button type="button" class="basket_button">В корзину</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
                     <td data-label="Название">Доска для пола, сорт А</td>
                     <td data-label="Материал">Лиственница</td>
                     <td data-label="Размер">27 × 134 × 2000 мм</td>
-                    <td data-label="Цена">1062 ₽</td>
+                    <td data-label="Цена">
+                        <div class="price_column">
+                            <p>1062 ₽</p>
+                            <button type="button" class="basket_button">В корзину</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Название">Вагонка</td>
+                    <td data-label="Материал">Термо-абаш</td>
+                    <td data-label="Размер">19 × 90 × 2000 мм</td>
+                    <td data-label="Цена">
+                        <div class="price_column">
+                            <p>1009 ₽</p>
+                            <button type="button" class="basket_button">В корзину</button>
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -93,13 +126,66 @@
                     Заказать проект
                 </h3>
 
-                <form id="form" action="#" enctype="multipart/form-data" method="post">
+                <form id="form" action="/order/" enctype="multipart/form-data" method="post">
 
                     <label for="name" class="name_label label_text">Название</label>
                     <input type="text" name="name" id="name"  class="form_name _req">
 
-                    <label for="price" class="price_label label_text">Цена</label>
-                    <input type="text" name="" id="price"  class="form_price _req">
+
+
+
+
+                    <label for="price" class="price_label label_text">Стоимость</label>
+                    <input type="number" name="price" id="price"  class="form_price _req" placeholder="20 000 000 ₽">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="0" class="slider">
+                    </div>
+                    <div class="prise-num">
+                        <p>10</p>
+                        <p>20</p>
+                        <p>30</p>
+                        <p>40+</p>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p class="square_label label_text">Отделка</p>
+                    <div class="square_wrap">
+                        <button type="button" class="square_button left_square_button">
+                            <img class="minus" src="minus.svg" alt="minus">
+                            <img class="minus-white" src="minus-white.svg" alt="minus">
+                        </button>
+                        <p>200 м2</p>
+                        <button type="button" class="square_button right_square_button">
+                            <img class="plus" src="plus.svg" alt="plus">
+                            <img class="plus-white" src="plus-white.svg" alt="minus">
+                        </button>
+                    </div>
+
+
+
+                    <p class="checkbox_label label_text">Отделка</p>
+                    <label class="checkbox-ios checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox-ios-switch"></span>
+                    </label>
+
+
+
+
 
                     <label for="phone" class="phone_label label_text">Телефон</label>
                     <input type="tel" name="phone" id="phone"  class="form_phone _req _tel" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
@@ -153,38 +239,22 @@
 
 
 
-
-
-                        <input type="reset" class="reset" value="Clear it!" />
-                        <div class="__select">
-                            <div class="__select__content">
-                                <input id="singleSelect0" class="__select__input" type="checkbox" name="singleSelect" checked />
-                                <label for="singleSelect0" class="__select__label">Option 0</label>
-                                <input id="singleSelect1" class="__select__input" type="checkbox" name="singleSelect" />
-                                <label for="singleSelect1" class="__select__label">Option 1</label>
-                                <input id="singleSelect2" class="__select__input" type="checkbox" name="singleSelect" disabled />
-                                <label for="singleSelect2" class="__select__label">Option 2 (disabled)</label>
-                                <input id="singleSelect3" class="__select__input" type="checkbox" name="singleSelect" />
-                                <label for="singleSelect3" class="__select__label">Option 3</label>
-                                <input id="singleSelect4" class="__select__input" type="checkbox" name="singleSelect" />
-                                <label for="singleSelect4" class="__select__label">Option 4</label>
-                                <input id="singleSelect5" class="__select__input" type="checkbox" name="singleSelect" />
-                                <label for="singleSelect5" class="__select__label">Option 5</label>
-                                <input id="singleSelect6" class="__select__input" type="checkbox" name="singleSelect" />
-                                <label for="singleSelect6" class="__select__label">Option 6</label>
-                                <input id="singleSelect7" class="__select__input" type="checkbox" name="singleSelect" />
-                                <label for="singleSelect7" class="__select__label">Option 7</label>
-                            </div>
+                    <p class="select_label label_text">Материал дома</p>
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <img class="select_open" src="select_close.svg" alt="open">
+                            <button class="dropdown__button">
+                                Материал дома
+                            </button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="travel">Кирпичный</li>
+                                <li class="dropdown__list-item" data-value="lessons">Деревянный</li>
+                                <li class="dropdown__list-item" data-value="photo">Каркасный</li>
+                                <li class="dropdown__list-item" data-value="sport">Монолитный</li>
+                            </ul>
+                            <input type="text" name="select-category"  class="dropdown__input-hidden" >
                         </div>
-
-
-
-
-
-
-
-
-
+                    </div>
 
 
 
@@ -203,7 +273,7 @@
 
 
                     <label for="wishes" class=" wishes_label label_text">Пожелания</label>
-                    <input type="text" name="wishes" id="wishes"  class="form_wishes _req">
+                    <input type="text" name="wishes" id="wishes"  class="form_wishes _req" placeholder="Укажите через запятую">
                     <div class="wish_items">
                         <div class="wish_item">
                             <p>Кондиционер</p>
@@ -228,11 +298,10 @@
 
 
 
-                    <button id="submitApplication" class="form_button" type="submit">ОТПРАВИТЬ</button>
+                    <button id="submitApplication" class="form_button" type="submit">Отправить заявку</button>
 
 
                 </form>
-
 
 
 
@@ -261,7 +330,9 @@
     </footer>
 
 
-<!--    <script src="jquery-3.6.1.min.js"></script>-->
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="request.js"></script>
+
 
     <script src="https://unpkg.com/imask"></script>
 

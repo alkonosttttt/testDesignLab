@@ -1,0 +1,93 @@
+.checkbox-ios {
+    height: 28px;
+    font-family: 'Gilroy', sans-serif;
+    line-height: 24px;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 16px;
+    user-select: none;
+    display: flex;
+    gap: 10px;
+}
+.checkbox-ios .checkbox-ios-switch {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 46px;
+    height: 24px;
+    border-radius: 25%/50%;
+    vertical-align: top;
+    transition: .2s;
+    background-color: #BABAC2;
+    border: 0;
+}
+.checkbox-ios .checkbox-ios-switch:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: -4px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    transition: .15s;
+}
+.checkbox-ios input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.checkbox-ios input[type=checkbox]:not(:disabled):active + .checkbox-ios-switch:before {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+}
+.checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch {
+    background: #0066CC;
+    border: 0;
+}
+.checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch:before {
+    transform:translateX(28px);
+}
+
+/* Hover */
+.checkbox-ios input[type="checkbox"]:not(:disabled) + .checkbox-ios-switch {
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, .3);
+}
+
+/* Disabled */
+.checkbox-ios input[type=checkbox]:disabled + .checkbox-ios-switch {
+    filter: grayscale(70%);
+    border-color: rgba(0, 0, 0, .1);
+}
+.checkbox-ios input[type=checkbox]:disabled + .checkbox-ios-switch:before {
+    background: #eee;
+}
+
+
+/*input.switch {*/
+/*    -moz-appearance: none;*/
+/*    -webkit-appearance: none;*/
+/*    -o-appearance: none;*/
+/*    appearance: none;*/
+/*    border-radius: 1em;*/
+/*    box-shadow: inset -1em 0px 0px 0px rgba(192, 192, 192, 1);*/
+/*    background-color: white;*/
+/*    border: 1px solid rgba(192, 192, 192, 1);*/
+/*    outline: none;*/
+/*    -webkit-transition: 0.2s;*/
+/*    transition: 0.2s;*/
+/*    width: 46px;*/
+/*    height: 24px;*/
+/*}*/
+
+/*input.switch:checked {*/
+/*    box-shadow: inset 1em 0px 0px 0px rgba(33, 150, 243, 0.5);*/
+/*    border: 1px solid rgba(33, 150, 243, 1);*/
+
+/*}*/

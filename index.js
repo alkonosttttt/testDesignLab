@@ -16,13 +16,9 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
-
 //Form validation
 
 
-"use strict"
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
@@ -40,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementsByClassName('form_phone')[0].placeholder = 'Пожалуйста, заполните это поле';
             document.getElementsByClassName('form_email')[0].placeholder = 'Пожалуйста, заполните это поле';
             document.getElementsByClassName('form_wishes')[0].placeholder = 'Пожалуйста, заполните это поле';
+            document.getElementsByClassName('.form_price')[0].placeholder = 'Пожалуйста, заполните это поле';
 
 
 
@@ -178,5 +175,10 @@ function show_hide_password(target){
     }
     return false;
 }
+
+
+
+
+//
 
 

@@ -42,6 +42,7 @@ button {
     border: 0;
     background-color: transparent;
     padding: 0;
+    cursor: pointer;
 }
 body {
     font-family: 'Gilroy', sans-serif;
@@ -96,10 +97,10 @@ main {
     flex-direction: column;
 }
 
-.sec_table {
+.sec_table h2 {
     margin-top: 94px;
 }
-.sec_form, .sec_gallery {
+.sec_form h2, .sec_gallery h2 {
     margin-top: 104px;
 }
 
@@ -211,10 +212,6 @@ table tr {
 
 /* FORM*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-.sec_form {
-    margin-top: 104px;
-}
-
 .form_wrap {
     background-color: #F5F5F7;
     border-radius: 20px;
@@ -223,6 +220,7 @@ table tr {
     box-sizing: border-box;
 }
 h3 {
+    margin: 0 0 47px 0;
     font-weight: 700;
     font-size: 36px;
     line-height: 40px;
@@ -253,7 +251,7 @@ h3 {
 }
 
 
-.form_name, .form_phone, .form_email, .form_comment, #sendFile, .form_price, .form_wishes, .form_password {
+.form_name, .form_phone, .form_email, .form_comment, #sendFile, .form_price, .form_wishes, .form_password, .form-group {
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
     color: #1D1D1F;
@@ -281,13 +279,106 @@ h3 {
 }
 
 
-.form_price, .price_label {
+.form_price, .price_label, .slidecontainer, .slider, .prise-num {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 1;
+}
+.slidecontainer {
+    width: 100%;
+    cursor: pointer;
+}
+.slider {
+    height: 2px;
+    width: 100%;
+    margin-top: 89px;
+}
+.prise-num {
+    margin-top: 105px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #58585D;
+    line-height: 16px;
 }
 
+
+
+
+
+.square_button {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #E1E1E1;
+}
+.left_square_button {
+    border-radius: 4px 0 0 4px;
+}
+.right_square_button {
+    border-radius: 0 4px 4px 0;
+}
+.square_button:hover {
+    background-color: #0066CC;
+    border: 1px solid #0066CC;
+}
+.square_button:hover .minus-white{
+     display: block;
+ }
+.square_button:hover .minus{
+    display: none;
+}
+
+.square_button:hover .plus-white{
+    display: block;
+}
+.square_button:hover .plus{
+    display: none;
+}
+.plus {
+    display: block;
+}
+.plus-white {
+    display: none;
+}
+.minus {
+    display: block;
+}
+.minus-white {
+    display: none;
+}
+
+.square_wrap {
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    width: 222px;
+    background-color: white;
+    align-items: center;
+    margin-top: 34px;
+}
+.square_label, .square_wrap {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.checkbox, .checkbox_label {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.checkbox {
+    margin-top: 44px;
+}
 .form_phone, .phone_label {
     grid-row-start: 3;
     grid-row-end: 3;
@@ -398,11 +489,16 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
 }
-
+.form-group, .select_label {
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
 .password, .password_label {
     grid-row-start: 6;
     grid-row-end: 6;
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 5;
 }
 .password{
@@ -427,26 +523,7 @@ h3 {
 
 
 
-.__select {
-    display: flex;
-    width: 230px;
-    height: 204px;
-    margin: 0 auto;
-    overflow: hidden;
 
-    border-radius: 5px;
-    border: solid 1px #c7ccd1;
-}
-
-.__select__content {
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    width: 100%;
-
-    overflow-y: auto;
-    overflox-x: hidden;
-}
 
 .reset {
     display: flex;
@@ -466,27 +543,24 @@ h3 {
 
     background-color: #ffffff;
     color: #333333;
-
-
-
-
-.__select__label {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    height: 40px;
-    padding: 0 16px;
-
-    transition: all 0.2s ease-out;
-
-    cursor: pointer;
-
 }
 
+.reset:hover {
+     background-color: #D8093A;
+     color: #ffffff;
+ }
 
 
+.__select {
+    position: relative;
 
+    display: flex;
+    width: 230px;
+    height: 40px;
+    margin: 0 auto;
 
+    z-index: 1;
+}
 
 
 
@@ -522,12 +596,14 @@ h3 {
     padding: 7px 13px 9px 16px;
     box-sizing: border-box;
 }
+
+
+
 #submitApplication {
-    text-transform: uppercase;
-    background-color: #D53D0F;
-    border-radius: 8px;
-    height: 100%;
-    width: 180px;
+    background-color: #0066CC;
+    border-radius: 4px;
+    height: 56px;
+    width: 192px;
     grid-row-start: 8;
     grid-row-end: 8;
     grid-column-start: 1;
@@ -535,13 +611,17 @@ h3 {
     border: 0;
     font-family: 'Gilroy', sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 24px;
     color: #FFFFFF;
     cursor: pointer;
 }
 
-#submitApplication:hover {
-    background-color: #f45627;
+
+.form_name::-webkit-input-placeholder, .form_phone::-webkit-input-placeholder,
+.form_email::-webkit-input-placeholder,.form_comment::-webkit-input-placeholder,
+.form_wishes::-webkit-input-placeholder, .form_price::-webkit-input-placeholder {
+    color: #1D1D1F;
 }
 
 
@@ -549,47 +629,48 @@ h3 {
 
 /*-----------------------СТИЛИ ДЛЯ НЕЗАПОЛНЕННЫХ ПОЛЕЙ ПОЛЕЙ*/
 
-.form_name._error, .form_phone._error, .form_email._error, .form_comment._error, .form_wishes._error{
+.form_name._error, .form_phone._error, .form_email._error, .form_comment._error, .form_wishes._error, .form_price._error{
 
     border: 1px solid rgba(220, 53, 69, 1);
 }
 
 .form_name._red:focus::-webkit-input-placeholder, .form_phone._red:focus::-webkit-input-placeholder,
 .form_email._red:focus::-webkit-input-placeholder,.form_comment._red:focus::-webkit-input-placeholder,
-.form_wishes._red:focus::-webkit-input-placeholder {
+.form_wishes._red:focus::-webkit-input-placeholder, .form_price._red:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
 /*Chrome 57 и Firefox 51*/
 
 .form_name._red::placeholder, .form_phone._red::placeholder, .form_email._red::placeholder,
-.form_comment._red::placeholder, .form_wishes._red::placeholder{
+.form_comment._red::placeholder, .form_wishes._red::placeholder, .form_price._red::placeholder{
     color: rgba(220, 53, 69, 1);
+    font-size: 12px;
 }
 /*Firefox новые версии*/
 .form_name._red::-moz-placeholder, .form_phone._red::-moz-placeholder, .form_email._red::-moz-placeholder,
-.form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder{
+.form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder, .form_price._red::-moz-placeholder{
     color: rgba(220, 53, 69, 1);
 }
 /*Internet Explorer*/
 .form_name._red:-ms-input-placeholder, .form_phone._red:-ms-input-placeholder, .form_email._red:-ms-input-placeholder,
-.form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder{
+.form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder, .form_price._red:-ms-input-placeholder{
     color: rgba(220, 53, 69, 1);
 }
 /*Microsoft Edge*/
 .form_name._red::-ms-input-placeholder, .form_phone._red::-ms-input-placeholder, .form_email._red::-ms-input-placeholder,
-.form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder{
+.form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder, .form_price._red::-ms-input-placeholder{
     color: rgba(220, 53, 69, 1);
 }
 /*Chrome, Opera и Safari*/
 .form_name._red::-webkit-input-placeholder, .form_phone._red::-webkit-input-placeholder,
 .form_email._red::-webkit-input-placeholder, .form_comment._red::-webkit-input-placeholder,
-.form_wishes._red::-webkit-input-placeholder{
+.form_wishes._red::-webkit-input-placeholder, .form_price._red::-webkit-input-placeholder{
     color: rgba(220, 53, 69, 1);
 }
 /*Firefox с 4 по 19 версии*/
 .form_name._red-moz-placeholder, .form_phone._red-moz-placeholder, .form_email._red-moz-placeholder,
-.form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder{
+.form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder, .form_price._red-moz-placeholder{
     color: rgba(220, 53, 69, 1);
 }
 
@@ -598,6 +679,7 @@ h3 {
 
 
 input {
+    cursor: pointer;
     border-radius: 4px;
     height: 56px;
 }
@@ -613,12 +695,6 @@ input {
 
 
 
-
-
-
-
-
-
 #gallery {
     height: 1000px;
     background-color: darkorange;
@@ -626,91 +702,7 @@ input {
 
 
 
-@media screen and (max-width: 540px) {
-
-
-    table {
-        /*border: 0;*/
-    }
-
-    table thead {
-        display: none;
-    }
-
-    table tr {
-        padding: 0;
-        margin-bottom: 16px;
-        display: block;
-        height: auto;
-    }
 
 
 
-    table td {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        column-gap: 16px;
-        height: 56px;
-        text-align: left;
-        border-bottom: 1px solid #E1E1E1;
-        align-items: center;
-
-
-
-    }
-
-    table td:last-child {
-        border-bottom: 0;
-    }
-
-    table td:before {
-        background-color: #F5F5F7;
-        width: 109px;
-        min-width: 109px;
-        height: inherit;
-        content: attr(data-label);
-        float: left;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        padding-left: 15px;
-    }
-
-    .price_column {
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 375px) {
-
-    .breadcrumbs {
-        margin-top: 51px;
-    }
-
-    h1 {
-        font-size: 48px;
-        line-height: 48px;
-        margin-top: 15px;
-    }
-
-    h2 {
-        font-size: 40px;
-        line-height: 56px;
-        text-align: center;
-    }
-
-    .sec_table {
-        margin-top: 46px;
-    }
-
-    .text {
-        font-size: 16px;
-        line-height: 24px;
-        margin-top: 17px;
-        margin-bottom: 43px;
-    }
-}
+/*progress ++++++++++++++++++++++++++++++++*/
