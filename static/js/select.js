@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
     const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
     const dropDownList = dropDownWrapper.querySelector('.dropdown__list');

@@ -1,64 +1,14 @@
-
-@media screen and (max-width: 540px) {
-
-
-    table {
-        /*border: 0;*/
-    }
-
-    table thead {
-        display: none;
-    }
-
-    table tr {
-        padding: 0;
-        margin-bottom: 16px;
-        display: block;
-        height: auto;
-    }
-
-
-
-    table td {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        column-gap: 16px;
-        height: 56px;
-        text-align: left;
-        border-bottom: 1px solid #E1E1E1;
-        align-items: center;
-
-
-
-    }
-
-    table td:last-child {
-        border-bottom: 0;
-    }
-
-    table td:before {
-        background-color: #F5F5F7;
-        width: 109px;
-        min-width: 109px;
-        height: inherit;
-        content: attr(data-label);
-        float: left;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        padding-left: 15px;
-    }
-
+@media screen and (max-width: 768px) {
     .form_wrap {
         padding: 41px 32px 64px 32px;
     }
+
     h3 {
         margin: 0 0 38px 0;
         font-size: 32px;
     }
-    #form{
+
+    #form {
         position: relative;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -69,6 +19,7 @@
         line-height: 24px;
 
     }
+
     .price_column {
         flex-direction: row;
         width: 100%;
@@ -103,6 +54,7 @@
         grid-column-start: 1;
         grid-column-end: 1;
     }
+
     .checkbox {
         position: absolute;
         right: 0;
@@ -115,10 +67,12 @@
         grid-column-start: 1;
         grid-column-end: 1;
     }
+
     .phone_label {
         margin-top: -20px;
     }
-    .form_phone{
+
+    .form_phone {
         margin-top: 14px;
     }
 
@@ -140,17 +94,19 @@
 
     .form-group, .select_label {
         grid-row-start: 8;
-        grid-row-end:8;
+        grid-row-end: 8;
         grid-column-start: 1;
         grid-column-end: 1;
     }
+
     .password, .password_label {
         grid-row-start: 9;
         grid-row-end: 9;
         grid-column-start: 1;
         grid-column-end: 1;
     }
-    .form_wishes, .wishes_label, .wish_items  {
+
+    .form_wishes, .wishes_label, .wish_items {
         grid-row-start: 10;
         grid-row-end: 10;
         grid-column-start: 1;
@@ -165,9 +121,11 @@
         justify-self: center;
 
     }
+
     input {
         width: 100%;
     }
+
     .wish_item, .file_preview {
         display: none;
     }
@@ -178,36 +136,95 @@
 
 
     .form_name._red::placeholder, .form_phone._red::placeholder, .form_email._red::placeholder,
-    .form_comment._red::placeholder, .form_wishes._red::placeholder, .form_price._red::placeholder{
-        font-size: 12px;
-    }
-    /*Firefox новые версии*/
-    .form_name._red::-moz-placeholder, .form_phone._red::-moz-placeholder, .form_email._red::-moz-placeholder,
-    .form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder, .form_price._red::-moz-placeholder{
-        font-size: 12px;
-    }
-    /*Internet Explorer*/
-    .form_name._red:-ms-input-placeholder, .form_phone._red:-ms-input-placeholder, .form_email._red:-ms-input-placeholder,
-    .form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder, .form_price._red:-ms-input-placeholder{
-        font-size: 12px;
-    }
-    /*Microsoft Edge*/
-    .form_name._red::-ms-input-placeholder, .form_phone._red::-ms-input-placeholder, .form_email._red::-ms-input-placeholder,
-    .form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder, .form_price._red::-ms-input-placeholder{
-        font-size: 12px;
-    }
-    /*Chrome, Opera и Safari*/
-    .form_name._red::-webkit-input-placeholder, .form_phone._red::-webkit-input-placeholder,
-    .form_email._red::-webkit-input-placeholder, .form_comment._red::-webkit-input-placeholder,
-    .form_wishes._red::-webkit-input-placeholder, .form_price._red::-webkit-input-placeholder{
-        font-size: 12px;
-    }
-    /*Firefox с 4 по 19 версии*/
-    .form_name._red-moz-placeholder, .form_phone._red-moz-placeholder, .form_email._red-moz-placeholder,
-    .form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder, .form_price._red-moz-placeholder{
+    .form_comment._red::placeholder, .form_wishes._red::placeholder, .form_price._red::placeholder {
         font-size: 12px;
     }
 
+    /*Firefox новые версии*/
+    .form_name._red::-moz-placeholder, .form_phone._red::-moz-placeholder, .form_email._red::-moz-placeholder,
+    .form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder, .form_price._red::-moz-placeholder {
+        font-size: 12px;
+    }
+
+    /*Internet Explorer*/
+    .form_name._red:-ms-input-placeholder, .form_phone._red:-ms-input-placeholder, .form_email._red:-ms-input-placeholder,
+    .form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder, .form_price._red:-ms-input-placeholder {
+        font-size: 12px;
+    }
+
+    /*Microsoft Edge*/
+    .form_name._red::-ms-input-placeholder, .form_phone._red::-ms-input-placeholder, .form_email._red::-ms-input-placeholder,
+    .form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder, .form_price._red::-ms-input-placeholder {
+        font-size: 12px;
+    }
+
+    /*Chrome, Opera и Safari*/
+    .form_name._red::-webkit-input-placeholder, .form_phone._red::-webkit-input-placeholder,
+    .form_email._red::-webkit-input-placeholder, .form_comment._red::-webkit-input-placeholder,
+    .form_wishes._red::-webkit-input-placeholder, .form_price._red::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+
+    /*Firefox с 4 по 19 версии*/
+    .form_name._red-moz-placeholder, .form_phone._red-moz-placeholder, .form_email._red-moz-placeholder,
+    .form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder, .form_price._red-moz-placeholder {
+        font-size: 12px;
+    }
+
+    .slide-gallery .item img {
+        object-fit: cover;
+        width: 166px;
+        height: 93px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+
+    table {
+        /*border: 0;*/
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        padding: 0;
+        margin-bottom: 16px;
+        display: block;
+        height: auto;
+    }
+
+
+    table td {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 16px;
+        height: 56px;
+        text-align: left;
+        border-bottom: 1px solid #E1E1E1;
+        align-items: center;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        background-color: #F5F5F7;
+        width: 109px;
+        min-width: 109px;
+        height: inherit;
+        content: attr(data-label);
+        float: left;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
 
 }
 

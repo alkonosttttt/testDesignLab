@@ -19,8 +19,7 @@ window.addEventListener('scroll', () => {
 //Form validation
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
 
@@ -29,15 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let error = formValidate(form);
 
-        if (error===0){
+        if (error === 0) {
 
-        }else {
+        } else {
             document.getElementsByClassName('form_name')[0].placeholder = 'Пожалуйста, заполните это поле';
             document.getElementsByClassName('form_phone')[0].placeholder = 'Пожалуйста, заполните это поле';
             document.getElementsByClassName('form_email')[0].placeholder = 'Пожалуйста, заполните это поле';
             document.getElementsByClassName('form_wishes')[0].placeholder = 'Пожалуйста, заполните это поле';
             document.getElementsByClassName('.form_price')[0].placeholder = 'Пожалуйста, заполните это поле';
-
 
 
         }
@@ -51,15 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const input = formReq[index];
             formRemoveError(input);
 
-            if (input.classList.contains('_email')){
-                if (emailTest(input)){
+            if (input.classList.contains('_email')) {
+                if (emailTest(input)) {
                     formAddError(input);
                     formAddErrorRed(input);
                     error++;
 
                 }
-            }
-            else {
+            } else {
                 if (input.value === '') {
                     formAddError(input);
                     formAddErrorRed(input);
@@ -69,14 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return error;
     }
+
     function formAddError(input) {
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
     }
+
     function formRemoveError(input) {
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
     }
+
     //функция теста email
     function emailTest(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
-
 
 
 //Добавить файл
@@ -114,7 +113,7 @@ let dropArea = document.getElementById("drop-area")
 // Handle dropped files
 dropArea.addEventListener('drop', handleDrop, false)
 
-function preventDefaults (e) {
+function preventDefaults(e) {
     e.preventDefault()
     e.stopPropagation()
 }
@@ -135,7 +134,6 @@ function handleDrop(e) {
 }
 
 
-
 function handleFiles(files) {
     files = [...files]
 
@@ -145,14 +143,14 @@ function handleFiles(files) {
 function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
-    reader.onloadend = function() {
+    reader.onloadend = function () {
         let img = document.createElement('img')
         img.src = reader.result
         document.getElementById('sendFile-gallery').appendChild(img)
     }
 }
 
-document.querySelector('.sendFile-clean').addEventListener('click', function(){
+document.querySelector('.sendFile-clean').addEventListener('click', function () {
     console.log(fileElem.value)
     fileElem.value = ""
     console.log(fileElem.value)
@@ -160,11 +158,8 @@ document.querySelector('.sendFile-clean').addEventListener('click', function(){
 })
 
 
-
-
-
 //показать и скрыть пароль
-function show_hide_password(target){
+function show_hide_password(target) {
     let input = document.getElementById('password-input');
     if (input.getAttribute('type') == 'password') {
         target.classList.add('view');
@@ -175,8 +170,6 @@ function show_hide_password(target){
     }
     return false;
 }
-
-
 
 
 //

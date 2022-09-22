@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Gilroy';
-    src: url("fonts/Gilroy-Regular.woff2"),
-    url("fonts/Gilroy-Regular.woff");
+    src: url("../fonts/Gilroy-Regular.woff2"),
+    url("../fonts/Gilroy-Regular.woff");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("fonts/Gilroy-Medium.woff2"),
-    url("fonts/Gilroy-Medium.woff");
+    src: url("../fonts/Gilroy-Medium.woff2"),
+    url("../fonts/Gilroy-Medium.woff");
     font-style: normal;
     font-weight: 500;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("fonts/Gilroy-SemiBold.woff2"),
-    url("fonts/Gilroy-SemiBold.woff");
+    src: url("../fonts/Gilroy-SemiBold.woff2"),
+    url("../fonts/Gilroy-SemiBold.woff");
     font-style: normal;
     font-weight: 600;
     font-display: swap;
@@ -27,23 +27,28 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url("fonts/Gilroy-Bold.woff2"),
-    url("fonts/Gilroy-Bold.woff");
+    src: url("../fonts/Gilroy-Bold.woff2"),
+    url("../fonts/Gilroy-Bold.woff");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
 }
 
 
-html,body,div,p,h1,header,nav,aside,footer,a,ul,li,input,form, h1, h2 {
-    margin:0;padding:0;outline:0;border:0;
+html, body, div, p, h1, header, nav, aside, footer, a, ul, li, input, form, h1, h2 {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
 }
+
 button {
     border: 0;
     background-color: transparent;
     padding: 0;
     cursor: pointer;
 }
+
 body {
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
@@ -81,12 +86,14 @@ nav {
     flex-wrap: wrap;
     row-gap: 5px;
 }
+
 nav a {
     font-weight: 500;
     font-size: 16px;
     line-height: 32px;
 
 }
+
 nav a:hover, nav a.active {
     color: rgba(0, 102, 204, 1);
 }
@@ -100,6 +107,7 @@ main {
 .sec_table h2 {
     margin-top: 94px;
 }
+
 .sec_form h2, .sec_gallery h2 {
     margin-top: 104px;
 }
@@ -114,6 +122,7 @@ main {
     justify-content: center;
     line-height: 16px;
 }
+
 .breadcrumb:hover {
     color: rgba(0, 102, 204, 1);
 }
@@ -148,8 +157,8 @@ section {
 
 table {
     width: 100%;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     border-collapse: collapse;
     border-spacing: 0;
     color: #1D1D1F;
@@ -207,9 +216,6 @@ table tr {
 }
 
 
-
-
-
 /* FORM*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .form_wrap {
@@ -219,6 +225,7 @@ table tr {
     padding: 96px;
     box-sizing: border-box;
 }
+
 h3 {
     margin: 0 0 47px 0;
     font-weight: 700;
@@ -235,11 +242,10 @@ h3 {
 /*<!--+++++++++++++++ОСТАВИТЬ ЗАЯВКУ +++++++++++++++++++++++++++++++++++-->*/
 
 
-
 /*=====================ОСТАВИТЬ ЗАЯВКУ форма 1*/
 
 
-#form{
+#form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, minmax(56px, auto));
@@ -263,6 +269,7 @@ h3 {
     border: 1px solid rgba(225, 225, 225, 1);
     box-sizing: border-box;
 }
+
 /**/
 
 .form_name:focus, .form_phone:focus, .form_email:focus, .form_comment:focus, #sendFile:focus,
@@ -285,15 +292,18 @@ h3 {
     grid-column-start: 1;
     grid-column-end: 1;
 }
+
 .slidecontainer {
     width: 100%;
     cursor: pointer;
 }
+
 .slider {
     height: 2px;
     width: 100%;
     margin-top: 89px;
 }
+
 .prise-num {
     margin-top: 105px;
     display: flex;
@@ -302,9 +312,6 @@ h3 {
     color: #58585D;
     line-height: 16px;
 }
-
-
-
 
 
 .square_button {
@@ -316,38 +323,48 @@ h3 {
     background-color: white;
     border: 1px solid #E1E1E1;
 }
+
 .left_square_button {
     border-radius: 4px 0 0 4px;
 }
+
 .right_square_button {
     border-radius: 0 4px 4px 0;
 }
+
 .square_button:hover {
     background-color: #0066CC;
     border: 1px solid #0066CC;
 }
-.square_button:hover .minus-white{
-     display: block;
- }
-.square_button:hover .minus{
+
+.square_button:hover .minus-white {
+    display: block;
+}
+
+.square_button:hover .minus {
     display: none;
 }
 
-.square_button:hover .plus-white{
+.square_button:hover .plus-white {
     display: block;
 }
-.square_button:hover .plus{
+
+.square_button:hover .plus {
     display: none;
 }
+
 .plus {
     display: block;
 }
+
 .plus-white {
     display: none;
 }
+
 .minus {
     display: block;
 }
+
 .minus-white {
     display: none;
 }
@@ -364,21 +381,25 @@ h3 {
     align-items: center;
     margin-top: 34px;
 }
+
 .square_label, .square_wrap {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
 .checkbox, .checkbox_label {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 5;
 }
+
 .checkbox {
     margin-top: 44px;
 }
+
 .form_phone, .phone_label {
     grid-row-start: 3;
     grid-row-end: 3;
@@ -401,6 +422,7 @@ h3 {
     grid-column-start: 1;
     grid-column-end: 5;
 }
+
 #drop-area {
     margin-top: 34px;
     min-height: 112px;
@@ -418,7 +440,6 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-
 
 
 .sendFile-button {
@@ -441,12 +462,14 @@ h3 {
     flex-wrap: wrap;
     display: flex;
 }
+
 #sendFile-gallery img {
     justify-self: center;
     width: 130px;
     height: max-content;
     vertical-align: middle;
 }
+
 .sendFile-button-img {
     height: 60px;
     width: 60px;
@@ -456,6 +479,7 @@ h3 {
 #fileElem {
     display: none;
 }
+
 .sendFile-text {
     font-size: 16px;
     color: #6C786A;
@@ -474,12 +498,14 @@ h3 {
     display: flex;
     flex-direction: column;
 }
+
 .files {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
+
 .file {
     font-family: 'Gilroy', sans-serif;
     font-weight: 300;
@@ -489,24 +515,29 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
 }
+
 .form-group, .select_label {
     grid-row-start: 6;
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
 }
+
 .password, .password_label {
     grid-row-start: 6;
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 5;
 }
-.password{
+
+.password {
     position: relative;
 }
+
 .form_password {
     width: 100%;
 }
+
 .password-control {
     position: absolute;
     top: 51px;
@@ -514,15 +545,12 @@ h3 {
     display: inline-block;
     width: 23px;
     height: 23px;
-    background: url(password_close.svg) 0 0 no-repeat;
+    background: url(images/password_close.svg) 0 0 no-repeat;
 }
+
 .password-control.view {
-    background: url(password_open.svg) 0 0 no-repeat;
+    background: url(images/password_open.svg) 0 0 no-repeat;
 }
-
-
-
-
 
 
 .reset {
@@ -546,9 +574,9 @@ h3 {
 }
 
 .reset:hover {
-     background-color: #D8093A;
-     color: #ffffff;
- }
+    background-color: #D8093A;
+    color: #ffffff;
+}
 
 
 .__select {
@@ -563,12 +591,7 @@ h3 {
 }
 
 
-
-
-
-
-
-.form_wishes, .wishes_label, .wish_items  {
+.form_wishes, .wishes_label, .wish_items {
     grid-row-start: 7;
     grid-row-end: 7;
     grid-column-start: 1;
@@ -580,6 +603,7 @@ h3 {
     display: flex;
     gap: 8px;
 }
+
 .wish_item {
     background-color: #58585D;
     width: max-content;
@@ -596,7 +620,6 @@ h3 {
     padding: 7px 13px 9px 16px;
     box-sizing: border-box;
 }
-
 
 
 #submitApplication {
@@ -619,7 +642,7 @@ h3 {
 
 
 .form_name::-webkit-input-placeholder, .form_phone::-webkit-input-placeholder,
-.form_email::-webkit-input-placeholder,.form_comment::-webkit-input-placeholder,
+.form_email::-webkit-input-placeholder, .form_comment::-webkit-input-placeholder,
 .form_wishes::-webkit-input-placeholder, .form_price::-webkit-input-placeholder {
     color: #1D1D1F;
 }
@@ -629,13 +652,13 @@ h3 {
 
 /*-----------------------СТИЛИ ДЛЯ НЕЗАПОЛНЕННЫХ ПОЛЕЙ ПОЛЕЙ*/
 
-.form_name._error, .form_phone._error, .form_email._error, .form_comment._error, .form_wishes._error, .form_price._error{
+.form_name._error, .form_phone._error, .form_email._error, .form_comment._error, .form_wishes._error, .form_price._error {
 
     border: 1px solid rgba(220, 53, 69, 1);
 }
 
 .form_name._red:focus::-webkit-input-placeholder, .form_phone._red:focus::-webkit-input-placeholder,
-.form_email._red:focus::-webkit-input-placeholder,.form_comment._red:focus::-webkit-input-placeholder,
+.form_email._red:focus::-webkit-input-placeholder, .form_comment._red:focus::-webkit-input-placeholder,
 .form_wishes._red:focus::-webkit-input-placeholder, .form_price._red:focus::-webkit-input-placeholder {
     color: transparent;
 }
@@ -643,39 +666,43 @@ h3 {
 /*Chrome 57 и Firefox 51*/
 
 .form_name._red::placeholder, .form_phone._red::placeholder, .form_email._red::placeholder,
-.form_comment._red::placeholder, .form_wishes._red::placeholder, .form_price._red::placeholder{
+.form_comment._red::placeholder, .form_wishes._red::placeholder, .form_price._red::placeholder {
     color: rgba(220, 53, 69, 1);
     font-size: 12px;
 }
+
 /*Firefox новые версии*/
 .form_name._red::-moz-placeholder, .form_phone._red::-moz-placeholder, .form_email._red::-moz-placeholder,
-.form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder, .form_price._red::-moz-placeholder{
+.form_comment._red::-moz-placeholder, .form_wishes._red::-moz-placeholder, .form_price._red::-moz-placeholder {
     color: rgba(220, 53, 69, 1);
 }
+
 /*Internet Explorer*/
 .form_name._red:-ms-input-placeholder, .form_phone._red:-ms-input-placeholder, .form_email._red:-ms-input-placeholder,
-.form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder, .form_price._red:-ms-input-placeholder{
+.form_comment._red:-ms-input-placeholder, .form_wishes._red:-ms-input-placeholder, .form_price._red:-ms-input-placeholder {
     color: rgba(220, 53, 69, 1);
 }
+
 /*Microsoft Edge*/
 .form_name._red::-ms-input-placeholder, .form_phone._red::-ms-input-placeholder, .form_email._red::-ms-input-placeholder,
-.form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder, .form_price._red::-ms-input-placeholder{
+.form_comment._red::-ms-input-placeholder, .form_wishes._red::-ms-input-placeholder, .form_price._red::-ms-input-placeholder {
     color: rgba(220, 53, 69, 1);
 }
+
 /*Chrome, Opera и Safari*/
 .form_name._red::-webkit-input-placeholder, .form_phone._red::-webkit-input-placeholder,
 .form_email._red::-webkit-input-placeholder, .form_comment._red::-webkit-input-placeholder,
-.form_wishes._red::-webkit-input-placeholder, .form_price._red::-webkit-input-placeholder{
+.form_wishes._red::-webkit-input-placeholder, .form_price._red::-webkit-input-placeholder {
     color: rgba(220, 53, 69, 1);
 }
+
 /*Firefox с 4 по 19 версии*/
 .form_name._red-moz-placeholder, .form_phone._red-moz-placeholder, .form_email._red-moz-placeholder,
-.form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder, .form_price._red-moz-placeholder{
+.form_comment._red-moz-placeholder, .form_wishes._red-moz-placeholder, .form_price._red-moz-placeholder {
     color: rgba(220, 53, 69, 1);
 }
 
 /*валидация полей КОНЕЦ*/
-
 
 
 input {
@@ -685,24 +712,12 @@ input {
 }
 
 
-
-
-
-
-
 /*Send file +++++++++++++++++++++++++++++++++++++++++*/
 
 
-
-
 #gallery {
-    height: 1000px;
-    background-color: darkorange;
+    margin-bottom: 104px;
 }
-
-
-
-
 
 
 /*progress ++++++++++++++++++++++++++++++++*/

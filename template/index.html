@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/index.css" type="text/css">
+    <link rel="stylesheet" href="../static/select.css" type="text/css">
+    <link rel="stylesheet" href="../static/switch.css" type="text/css">
+    <link rel="stylesheet" href="../static/adaptability.css" type="text/css">
+    <link rel="stylesheet" href="../static/gallery.css" type="text/css">
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/switch.js"></script>
+    <script src="../static/js/select.js"></script>
+    <script src="../static/js/jquery-3.6.1.min.js"></script>
+    <script src="../static/js/request.js"></script>
+    <script src="../static/js/slider.js"></script>
+    <script src="../static/js/gallery.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <a href="#table" class="active">
+            Таблица
+        </a>
+        <a href="#form_section">
+            Форма
+        </a>
+        <a href="#gallery">
+            Галлерея
+        </a>
+    </nav>
+</header>
+
+<main>
+    <div class="breadcrumbs">
+        <a href="#" class="breadcrumb">
+            Главная
+        </a>
+        <p>&nbsp/&nbsp</p>
+        <a href="#" class="breadcrumb">
+            Тестовое задание
+        </a>
+    </div>
+    <h1>
+        Тестовое задание
+    </h1>
+
+
+    <!--Секция таблица-->
+
+
+    <section id="table" class="section sec_table">
+        <h2>
+            Таблица
+        </h2>
+        <p class="text">
+            Должна быть адаптивной, без дублирования информации.
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th>Материал</th>
+                <th>Размер</th>
+                <th>Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="Название">Стеновой паркет</td>
+                <td data-label="Материал">Ольха</td>
+                <td data-label="Размер">13 × 78 × 300 мм</td>
+                <td data-label="Цена">
+                    <div class="price_column">
+                        <p>52 ₽</p>
+                        <button type="button" class="basket_button">В корзину</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Название">Стеновой паркет</td>
+                <td data-label="Материал">Ольха</td>
+                <td data-label="Размер">13 × 78 × 600 мм</td>
+                <td data-label="Цена">
+                    <div class="price_column">
+                        <p>112 ₽</p>
+                        <button type="button" class="basket_button">В корзину</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Название">Доска для пола, сорт А</td>
+                <td data-label="Материал">Лиственница</td>
+                <td data-label="Размер">27 × 134 × 2000 мм</td>
+                <td data-label="Цена">
+                    <div class="price_column">
+                        <p>1062 ₽</p>
+                        <button type="button" class="basket_button">В корзину</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Название">Вагонка</td>
+                <td data-label="Материал">Термо-абаш</td>
+                <td data-label="Размер">19 × 90 × 2000 мм</td>
+                <td data-label="Цена">
+                    <div class="price_column">
+                        <p>1009 ₽</p>
+                        <button type="button" class="basket_button">В корзину</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!--Секция форма-->
+
+
+    <section id="form_section" class="section sec_form">
+        <h2>
+            Форма
+        </h2>
+        <p class="text">Должна иметь проверку полей: обязательное поле, формат, минимальное значение.
+            При несоответствии должна выводиться соответствующая ошибка.
+            Поле «Телефон» должен содержать маску ввода.
+        </p>
+        <div class="form_wrap">
+            <h3>
+                Заказать проект
+            </h3>
+
+            <form id="form" action="/order/" enctype="multipart/form-data" method="post">
+
+                <!--Название-->
+                <label for="name" class="name_label label_text">Название</label>
+                <input type="text" name="name" id="name" class="form_name _req">
+
+                <!--Стоимость-->
+                <label for="price" class="price_label label_text">Стоимость</label>
+                <input type="number" name="price" id="price" class="form_price _req" placeholder="20 000 000 ₽">
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="0" class="slider">
+                </div>
+                <div class="prise-num">
+                    <p>10</p>
+                    <p>20</p>
+                    <p>30</p>
+                    <p>40+</p>
+                </div>
+
+                <!--Площадь-->
+                <p class="square_label label_text">Отделка</p>
+                <div class="square_wrap">
+                    <button type="button" class="square_button left_square_button">
+                        <img class="minus" src="../static/images/minus.svg" alt="minus">
+                        <img class="minus-white" src="../static/images/minus-white.svg" alt="minus">
+                    </button>
+                    <p>200 м2</p>
+                    <button type="button" class="square_button right_square_button">
+                        <img class="plus" src="../static/images/plus.svg" alt="plus">
+                        <img class="plus-white" src="../static/images/plus-white.svg" alt="minus">
+                    </button>
+                </div>
+
+                <!--Флажок-->
+                <p class="checkbox_label label_text">Отделка</p>
+                <label class="checkbox-ios checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-ios-switch"></span>
+                </label>
+
+
+                <!--Телефон-->
+                <label for="phone" class="phone_label label_text">Телефон</label>
+                <input type="tel" name="phone" id="phone" class="form_phone _req _tel"
+                       pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+
+                <!--Почта-->
+                <label for="email" class="email_label label_text">Почта</label>
+                <input type="email" name="email" id="email" class="form_email _req _email">
+
+                <!--Добавить файлы-->
+                <p class="file_label label_text">Приложить файлы</p>
+                <div id="drop-area">
+                    <label class="sendFile-button" for="fileElem">
+                        <p>Кликните или перенесите файлы в эту область.</p>
+                        <p>Только JPG, до 1 Мб</p>
+                    </label>
+                    <input type="file" name="file" id="fileElem" multiple accept="image/*"
+                           onchange="handleFiles(this.files)">
+                    <div id="sendFile-gallery"></div>
+                </div>
+
+                <!--Отображение загруженных файлов-->
+                <div id="formPreview" class="file_preview">
+                    <div class="files">
+                        <div class="file">
+                            <button type="button">
+                                <img src="../static/images/delFileIcon.svg" alt="delete">
+                            </button>
+                            <div class="change">filename-01.jpg</div>
+                        </div>
+                    </div>
+                    <div class="files">
+                        <div class="file">
+                            <button type="button">
+                                <img src="../static/images/delFileIcon.svg" alt="delete">
+                            </button>
+                            <div class="change">filename-02.jpg</div>
+                        </div>
+                        <progress value="65" max="100"></progress>
+                    </div>
+                    <div class="files">
+                        <div class="file">
+                            <button type="button">
+                                <img src="../static/images/delFileIcon.svg" alt="delete">
+                            </button>
+                            <div class="change">filename-02-copy.jpg</div>
+                        </div>
+                        <progress value="30" max="100"></progress>
+                    </div>
+                </div>
+
+                <!--Выпадающий список-->
+                <p class="select_label label_text">Материал дома</p>
+                <div class="form-group">
+                    <div class="dropdown">
+                        <img class="select_open" src="../static/images/select_close.svg" alt="open">
+                        <button class="dropdown__button">
+                            Материал дома
+                        </button>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="travel">Кирпичный</li>
+                            <li class="dropdown__list-item" data-value="lessons">Деревянный</li>
+                            <li class="dropdown__list-item" data-value="photo">Каркасный</li>
+                            <li class="dropdown__list-item" data-value="sport">Монолитный</li>
+                        </ul>
+                        <input type="text" name="select-category" class="dropdown__input-hidden">
+                    </div>
+                </div>
+
+                <!--Пароль-->
+                <label for="password-input" class="password_label label_text">Пароль</label>
+                <div class="password">
+                    <input type="password" class="form_password _req" id="password-input" name="password">
+                    <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                </div>
+
+                <!--Пожелания-->
+                <label for="wishes" class=" wishes_label label_text">Пожелания</label>
+                <input type="text" name="wishes" id="wishes" class="form_wishes _req"
+                       placeholder="Укажите через запятую">
+                <div class="wish_items">
+                    <div class="wish_item">
+                        <p>Кондиционер</p>
+                        <button type="button">
+                            <img src="../static/images/del_wish.svg" alt="del_wish">
+                        </button>
+                    </div>
+                    <div class="wish_item">
+                        <p>Холодильник</p>
+                        <button type="button">
+                            <img src="../static/images/del_wish.svg" alt="del_wish">
+                        </button>
+                    </div>
+                    <div class="wish_item">
+                        <p>Интернет</p>
+                        <button type="button">
+                            <img src="../static/images/del_wish.svg" alt="del_wish">
+                        </button>
+                    </div>
+                </div>
+
+                <!--Кнопка-->
+                <button id="submitApplication" class="form_button" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!--Секция галерея-->
+    <section id="gallery" class="section sec_gallery">
+        <h2>
+            Галерея
+        </h2>
+        <p class="text">
+            Фильтры должны фильтровать изображения без перезагрузки. Адаптивность: между реперными точками —
+            пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото
+            (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото.
+        </p>
+        <div class="slide-gallery">
+            <div class="gallery-titles">
+                <button class="gallery-title bani-title" onclick="selectBani()">
+                    Бани
+                </button>
+                <button class="gallery-title sauni-title" onclick="selectSauni()">
+                    Сауны
+                </button>
+                <button class="gallery-title hamam1-title" onclick="selectHamami1()">
+                    Хамамы
+                </button>
+                <button class="gallery-title hamam2-title" onclick="selectHamami2()">
+                    Хамамы
+                </button>
+            </div>
+
+            <div class="bani-images">
+                <!-- Первая страница -->
+                <div class="item">
+                    <div class="slider-images">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Вторая страница -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath4.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                    </div>
+                </div>
+                <!-- третья страница слайд -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath7.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Кнопки-стрелочки -->
+                <div class="slider-buttons">
+                    <button class="gallery-button previous" onclick="previousSlide()">
+                        <img class="prev1" src="../static/images/prev1.svg" alt="prev">
+                        <img class="prev2" src="../static/images/prev2.svg" alt="prev">
+                    </button>
+                    <button class="gallery-button next" onclick="nextSlide()">
+                        <img class="next1" src="../static/images/next1.svg" alt="next">
+                        <img class="next2" src="../static/images/next2.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+            <div class="sauni-images">
+                <!-- Первая страница -->
+                <div class="item">
+                    <div class="slider-images">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath4.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Вторая страница -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath4.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                    </div>
+                </div>
+                <!-- третья страница слайд -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Кнопки-стрелочки -->
+                <div class="slider-buttons">
+                    <button class="gallery-button previous" onclick="previousSlide()">
+                        <img class="prev1" src="../static/images/prev1.svg" alt="prev">
+                        <img class="prev2" src="../static/images/prev2.svg" alt="prev">
+                    </button>
+                    <button class="gallery-button next" onclick="nextSlide()">
+                        <img class="next1" src="../static/images/next1.svg" alt="next">
+                        <img class="next2" src="../static/images/next2.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+            <div class="hamam1-images">
+                <!-- Первая страница -->
+                <div class="item">
+                    <div class="slider-images">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Вторая страница -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath4.png" alt="photo">
+                        <img src="../static/images/bath4.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                    </div>
+                </div>
+                <!-- третья страница слайд -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath8.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Кнопки-стрелочки -->
+                <div class="slider-buttons">
+                    <button class="gallery-button previous" onclick="previousSlide()">
+                        <img class="prev1" src="../static/images/prev1.svg" alt="prev">
+                        <img class="prev2" src="../static/images/prev2.svg" alt="prev">
+                    </button>
+                    <button class="gallery-button next" onclick="nextSlide()">
+                        <img class="next1" src="../static/images/next1.svg" alt="next">
+                        <img class="next2" src="../static/images/next2.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+            <div class="hamam2-images">
+                <!-- Первая страница -->
+                <div class="item">
+                    <div class="slider-images">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                        <img src="../static/images/bath2.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Вторая страница -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                        <img src="../static/images/bath3.png" alt="photo">
+                    </div>
+                </div>
+                <!-- третья страница слайд -->
+                <div class="item none-slide">
+                    <div class="slider-images">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath6.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath1.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                        <img src="../static/images/bath7.png" alt="photo">
+                        <img src="../static/images/bath5.png" alt="photo">
+                    </div>
+                </div>
+                <!-- Кнопки-стрелочки -->
+                <div class="slider-buttons">
+                    <button class="gallery-button previous" onclick="previousSlide()">
+                        <img class="prev1" src="../static/images/prev1.svg" alt="prev">
+                        <img class="prev2" src="../static/images/prev2.svg" alt="prev">
+                    </button>
+                    <button class="gallery-button next" onclick="nextSlide()">
+                        <img class="next1" src="../static/images/next1.svg" alt="next">
+                        <img class="next2" src="../static/images/next2.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+</main>
+
+
+<script src="https://unpkg.com/imask"></script>
+<script>
+    var element = document.getElementById('phone');
+    var element2 = document.getElementById('phone_2');
+    var maskOptions = {
+        mask: '+{7} (000) 000-00-00'
+    };
+    var mask = IMask(element, maskOptions);
+    var mask2 = IMask(element2, maskOptions);
+</script>
+</body>
+</html>

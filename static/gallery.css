@@ -1,0 +1,237 @@
+.none-slide {
+    display: none;
+}
+
+/* Слайдер */
+.slide-gallery {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: auto;
+    right: auto;
+    box-sizing: border-box;
+    padding: 44px 63px;
+
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу */
+.slide-gallery .item img {
+    object-fit: cover;
+    width: 430px;
+    height: 242px;
+}
+
+/* Кнопки вперед и назад */
+.previous, .next {
+    cursor: pointer;
+}
+
+/* Анимация слайдов */
+.slide-gallery .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.slider-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.slider-buttons {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.slide-wrap1 .slide-wrap2, .slide-wrap3, .slide-wrap4 {
+    position: relative;
+}
+
+.gallery-button {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* При наведении на кнопки добавляем фон кнопок */
+.slider-buttons .previous:hover, .slider-buttons .next:hover {
+    background-color: #0066CC;
+}
+
+.slider-buttons .previous:hover .prev1 {
+    display: none;
+}
+
+.slider-buttons .previous:hover .prev2 {
+    display: block;
+}
+
+.prev1 {
+    display: block;
+}
+
+.prev2 {
+    display: none;
+}
+
+.next:hover .next1 {
+    display: none;
+}
+
+.next:hover .next2 {
+    display: block;
+}
+
+.next1 {
+    display: block;
+}
+
+.next2 {
+    display: none;
+}
+
+
+/*titles*/
+
+.gallery-title {
+    background-color: #F2F4F7;
+    border-radius: 10px;
+    color: #333333;
+    padding: 4px 16px;
+    height: 40px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.gallery-titles {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.sauni-title {
+    background-color: #0066CC;
+    color: white;
+}
+
+
+.sauni-title.act {
+    background-color: #0066CC;
+    color: white;
+}
+
+.bani-title.act {
+    background-color: #0066CC;
+    color: white;
+}
+
+.hamam1-title.act {
+    background-color: #0066CC;
+    color: white;
+}
+
+.hamam2-title.act {
+    background-color: #0066CC;
+    color: white;
+}
+
+
+.sauni-title.not-act {
+    background-color: #F2F4F7;
+    color: #333333;
+}
+
+/*images*/
+
+
+.sauni-images, .bani-images, .hamam1-images, .hamam2-images {
+    position: relative;
+    margin-bottom: 104px;
+}
+
+.sauni-images {
+    display: block;
+}
+
+.bani-images, .hamam1-images, .hamam2-images {
+    display: none;
+}
+
+
+.sauni-images.act-img {
+    display: block;
+}
+
+.bani-images.act-img {
+    display: block;
+}
+
+.hamam1-images.act-img {
+    display: block;
+}
+
+.hamam2-images.act-img {
+    display: block;
+}
+
+
+.sauni-images.not-act-img {
+    display: none;
+}
+
+
+@media screen and (max-width: 1020px) {
+    .slide-gallery .item img {
+        object-fit: cover;
+        width: 196px;
+        height: 123px;
+    }
+
+    .slide-gallery {
+        padding: 24px 16px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .slide-gallery .item img {
+        object-fit: cover;
+        width: 166px;
+        height: 93px;
+    }
+
+    .slide-gallery {
+        padding: 24px 16px;
+    }
+
+    .gallery-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .slider-images {
+        gap: 9px;
+    }
+}
