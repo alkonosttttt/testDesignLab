@@ -42,6 +42,10 @@ html, body, div, p, h1, header, nav, aside, footer, a, ul, li, input, form, h1, 
     border: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 button {
     border: 0;
     background-color: transparent;
@@ -50,6 +54,7 @@ button {
 }
 
 body {
+    scroll-behavior: smooth;
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
     position: relative;

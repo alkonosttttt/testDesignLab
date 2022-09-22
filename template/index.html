@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="../static/switch.css" type="text/css">
     <link rel="stylesheet" href="../static/adaptability.css" type="text/css">
     <link rel="stylesheet" href="../static/gallery.css" type="text/css">
-    <script src="../static/js/index.js"></script>
-    <script src="../static/js/switch.js"></script>
-    <script src="../static/js/select.js"></script>
-    <script src="../static/js/jquery-3.6.1.min.js"></script>
-    <script src="../static/js/request.js"></script>
-    <script src="../static/js/slider.js"></script>
-    <script src="../static/js/gallery.js"></script>
 </head>
 <body>
 <header>
@@ -37,7 +30,7 @@
         <a href="#" class="breadcrumb">
             Главная
         </a>
-        <p>&nbsp/&nbsp</p>
+        <p>&nbsp;/&nbsp;</p>
         <a href="#" class="breadcrumb">
             Тестовое задание
         </a>
@@ -186,8 +179,8 @@
                 <p class="file_label label_text">Приложить файлы</p>
                 <div id="drop-area">
                     <label class="sendFile-button" for="fileElem">
-                        <p>Кликните или перенесите файлы в эту область.</p>
-                        <p>Только JPG, до 1 Мб</p>
+                        Кликните или перенесите файлы в эту область.
+                        Только JPG, до 1 Мб
                     </label>
                     <input type="file" name="file" id="fileElem" multiple accept="image/*"
                            onchange="handleFiles(this.files)">
@@ -524,8 +517,24 @@
     </section>
 </main>
 
-
+<script src="../static/js/index.js"></script>
+<script src="../static/js/switch.js"></script>
+<script src="../static/js/select.js"></script>
+<script src="../static/js/jquery-3.6.1.min.js"></script>
+<script src="../static/js/request.js"></script>
+<script src="../static/js/slider.js"></script>
+<script src="../static/js/gallery.js"></script>
 <script src="https://unpkg.com/imask"></script>
+<script>
+    jQuery(document).ready(function() {
+        jQuery("a.scrollto").click(function () {
+            elementClick = jQuery(this).attr("href")
+            destination = jQuery(elementClick).offset().top;
+            jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+            return false;
+        });
+    });
+</script>
 <script>
     var element = document.getElementById('phone');
     var element2 = document.getElementById('phone_2');

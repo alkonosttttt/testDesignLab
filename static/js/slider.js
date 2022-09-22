@@ -1,5 +1,7 @@
+//страница бани
+
 /* Устанавливаем индекс слайда по умолчанию */
-let slideIndex = 1;
+var slideIndex = 0;
 showSlides(slideIndex);
 
 /* Увеличиваем индекс на 1 — показываем следующий слайд*/
@@ -19,14 +21,12 @@ function currentSlide(n) {
 
 /* Функция перелистывания */
 function showSlides(n) {
-    let i;
     let slides = document.getElementsByClassName("item");
-
-    if (n > slides.length) {
-        slideIndex = 1
+    if (n > max_index) {
+        slideIndex = min_index
     }
-    if (n < 1) {
-        slideIndex = slides.length
+    if (n < min_index) {
+        slideIndex = max_index
     }
 
     /* Проходим по каждому слайду в цикле for */

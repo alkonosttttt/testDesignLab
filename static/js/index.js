@@ -1,4 +1,20 @@
 // active class of menu items onscroll
+
+
+max_index = 6;
+min_index = 4;
+SlideIndex=min_index;
+showSlides(slideIndex = min_index);
+document.querySelector(".bani-title").classList.remove('act');
+document.querySelector(".sauni-title").classList.remove('not-act');
+document.querySelector(".hamam1-title").classList.remove('act');
+document.querySelector(".hamam2-title").classList.remove('act');
+
+document.querySelector(".bani-images").classList.remove('act-img');
+document.querySelector(".sauni-images").classList.remove('not-act-img');
+document.querySelector(".hamam1-images").classList.remove('act-img');
+document.querySelector(".hamam2-images").classList.remove('act-img');
+
 window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
 
